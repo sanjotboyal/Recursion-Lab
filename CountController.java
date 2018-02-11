@@ -51,11 +51,14 @@ public class CountController implements Initializable {
     {
         // IMPLEMENT THIS RECURSIVE METHOD
         //this.countUpWindow.appendText("Please implement this method " + "\n");
-//>>>>>>>>> Comment the line above and add your code here <<<<<<<<<<<<<<<<<<<<        
+//>>>>>>>>> Comment the line above and add your code here <<<<<<<<<<<<<<<<<<<<    
+        
+        //Base case of just 1: print it from here 
         if(n==1) {
             this.countUpWindow.appendText(n+ "\n");
             
         } else {
+            //recursive 
             countUp(n-1);
             this.countUpWindow.appendText(n+ "\n");
         }
@@ -73,9 +76,12 @@ public class CountController implements Initializable {
         // IMPLEMENT THIS RECURSIVE METHOD
        // this.countDownWindow.appendText("Please implement this method " + "\n");
 //>>>>>>>>> Comment the line above and add your code here <<<<<<<<<<<<<<<<<<<<        
+        
+        //base case of just 1: print it here
         if(n==1){
             this.countDownWindow.appendText(n+ "\n");
         }else{
+            //print then recurse back 
             this.countDownWindow.appendText(n+ "\n");
             countDown(n-1);
         }
