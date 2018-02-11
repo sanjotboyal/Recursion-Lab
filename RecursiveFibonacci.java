@@ -89,11 +89,14 @@ public class RecursiveFibonacci
     {  
         long result = 0;
 //>>>>>>>>> ADDED CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
-       //if its 1: base case: its equal to fi
-       if(n==1) {
+       //if its 1: base case: its equal to 
+       if (n<0){
+           result = 0;
+       }
+       else if(n==1) {
            result = fi;
        //0 or - just set to fi1
-       }else if(n<=0){
+       }else if(n==0){
            result = fi1;
            
        }else{
