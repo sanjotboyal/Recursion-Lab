@@ -14,23 +14,31 @@ public class RecursiveStringReplace
     {
         String result = null;
         
-        
+        //if the string is of length 0: just empty string
         if(s.length() == 0){
             result = "";
+            
+        //if the string is of length 1: base case 
         }else if(s.length()==1){
+            //if the string is equal to the from value: replace it with the 'to' char value
             if(s.equals(String.valueOf(from))){
                 result = String.valueOf(to);
             }else{
+                //else result is just that unchanged char
                 result = s;
             }
         }else{
+            //first letter before recursion checked and replaced if needed
             String holdFirst = first(s);
+            //replaces if its equal to the from value
              if(holdFirst.equals(String.valueOf(from))){
                 holdFirst = String.valueOf(to);
             }
             
-             
+            //runs recursion to replace by checking each letter 
             String rest = replace(rest(s),from,to);
+            
+            //calls prepend function to join it together (adds it to orignal string)
             result = Prepend(holdFirst,rest);
         }
         
